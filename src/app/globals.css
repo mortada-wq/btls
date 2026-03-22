@@ -1,0 +1,83 @@
+@import '../styles/tailwind.css';
+@import '../styles/theme.css';
+
+:root {
+  --font-primary: 'DM Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-mono: 'DM Mono', 'Courier New', monospace;
+  --color-botle-sand: #1c2b36;
+  --color-botle-grey: #0d1b2a;
+  --color-botle-blue: #4a6b8a;
+  --color-botle-orange: #e8724a;
+  --bg-gemini-glow: linear-gradient(115deg, #7bafd4 0%, #f0ebe3 45%, #7bafd4 100%);
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  font-family: var(--font-primary);
+  background-color: #0d1b2a;
+  background-image:
+    linear-gradient(to right, rgba(123, 175, 212, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(123, 175, 212, 0.07) 1px, transparent 1px);
+  background-size: 40px 40px;
+  color: #f0ebe3;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, rgba(123, 175, 212, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(123, 175, 212, 0.04) 1px, transparent 1px);
+  background-size: 10px 10px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 40%, transparent 40%, rgba(13, 27, 42, 0.85) 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+}
+
+.botle-card {
+  position: relative;
+  z-index: 1;
+  border-radius: 12px;
+  border: 0.5px solid rgba(240, 235, 227, 0.08);
+  background: #1c2b36;
+  padding: 20px;
+  color: #f0ebe3;
+}
+
+.botle-input-wrapper {
+  position: relative;
+  border-radius: 9999px;
+  border: 0.5px solid rgba(123, 175, 212, 0.3);
+  background: #253545;
+  padding: 8px 12px;
+}
+
+.botle-input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: #f0ebe3;
+  font-size: 14px;
+  padding: 10px 8px;
+  outline: none;
+}
+
+.botle-input::placeholder {
+  color: rgba(240, 235, 227, 0.3);
+}
